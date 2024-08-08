@@ -18,7 +18,7 @@ const SplashScreen = ({ navigation }) => {
     <View style={styles.container}>
       {/* Optional logo image */}
       {/* <Image source={logo} style={styles.logo} /> */}
-      <Text style={styles.title}>VendME</Text>
+      <Text style={styles.title}>vendMe</Text>
     </View>
   );
 };
@@ -28,7 +28,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#1E90FF', // Example color
+    backgroundColor: '#483d8b', // Example color
   },
   title: {
     fontSize: 36,

@@ -10,18 +10,38 @@ const Stack = createNativeStackNavigator();
 
 const App = () => {
   return (
+    
     <NavigationContainer>
-      <Stack.Navigator
-        initialRouteName="Splash"
-        screenOptions={{ headerShown: false }}
-      >
-        <Stack.Screen name="Splash" component={SplashScreen} />
-        <Stack.Screen name="ProductList" component={ProductListScreen} />
-        <Stack.Screen name="ProductDetail" component={ProductDetailScreen} />
-        <Stack.Screen name="Payment" component={PaymentScreen} />
+      <Stack.Navigator initialRouteName="Splash">
+        <Stack.Screen 
+          name="Splash" 
+          component={SplashScreen} 
+          options={{ headerShown: false }} // Hiding header for Splash screen
+        />
+        <Stack.Screen 
+          name="ProductList" 
+          component={ProductListScreen}
+          options={{ 
+            title: 'Product List', 
+            headerStyle: { backgroundColor: '#1e90ff' }
+          }} // Showing header with a title
+        />
+        <Stack.Screen 
+          name="ProductDetail" 
+          component={ProductDetailScreen}
+          options={{ title: 'Product Detail' }}
+        />
+        <Stack.Screen 
+          name="Payment" 
+          component={PaymentScreen}
+          options={{ title: 'Payment' }}
+        />
       </Stack.Navigator>
     </NavigationContainer>
+
+
   );
+  
 };
 
 export default App;

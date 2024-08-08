@@ -5,10 +5,10 @@ const ProductDetailScreen = ({ route, navigation }) => {
   const { product } = route.params;
 
   return (
-    <ScrollView contentContainerStyle={styles.container} >
+    <ScrollView contentContainerStyle={styles.container}>
       <Image source={product.image} style={styles.image} />
       <Text style={styles.title}>{product.name}</Text>
-      <Text style={styles.price}>Price: Rs {product.price}</Text>
+      <Text style={styles.price}>Price: NRs {product.price}</Text>
       <Text style={styles.quantity}>Quantity: {product.quantity}</Text>
       <Button title="Buy Now with eSewa" onPress={() => navigation.navigate('Payment')} />
     </ScrollView>
